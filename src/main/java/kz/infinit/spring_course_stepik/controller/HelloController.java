@@ -1,0 +1,23 @@
+package kz.infinit.spring_course_stepik.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloController {
+
+  @GetMapping("/hello")
+  public String sayHello(){
+
+    return ">>>>>>>>> Привет! \n" + System.getProperty("java.class.path");
+
+  }
+
+
+
+
+
+
+
+
+}
