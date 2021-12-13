@@ -9,7 +9,7 @@ public class HelloController {
   @GetMapping("/hello")
   public String sayHello(){
 
-    return ">>>>>>>>> Привет! \n" + System.getProperty("java.class.path");
+    return ">>>>>>>>> Привет! \n";
 
   }
 
