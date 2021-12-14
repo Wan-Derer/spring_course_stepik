@@ -19,10 +19,15 @@ public class UserController {
     return userService.findAll();
   }
 
+  @GetMapping("/users/me")
+  public User getCurrentUser(){
+    return userService.getCurrentUser();
+  }
+
   @PostMapping("/users")
   public User createUser(@RequestBody User user){
     System.out.println(user);
-    return userService.save(user);
+    return userService.create(user);
   }
 
 }

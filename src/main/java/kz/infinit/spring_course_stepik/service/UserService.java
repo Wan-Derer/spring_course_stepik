@@ -4,7 +4,12 @@ import kz.infinit.spring_course_stepik.model.User;
 
 
 public interface UserService {
+
   Iterable<User> findAll();
 
-  User save(User user);
+  User create(User user);
+
+  User getCurrentUser();
+
+
 }
