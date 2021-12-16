@@ -20,9 +20,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @AllArgsConstructor
 public class SecurityConfig  extends WebSecurityConfigurerAdapter {
 
-  private UserDetailsService userDetailsService;
-  private CustomAuthenticationSuccessHandler customAuthenticationSuccessHandler;
-  private CustomAuthenticationFailureHandler customAuthenticationFailureHandler;
+  private final UserDetailsService userDetailsService;
+  private final CustomAuthenticationSuccessHandler customAuthenticationSuccessHandler;
+  private final CustomAuthenticationFailureHandler customAuthenticationFailureHandler;
 
   @Override
   protected void configure(HttpSecurity http) throws Exception {

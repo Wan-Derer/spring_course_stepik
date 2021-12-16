@@ -12,8 +12,8 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class UserServiceImpl implements UserService {
 
-  private UserRepository userRepo;
-  private PasswordEncoder passwordEncoder;
+  private final UserRepository userRepo;
+  private final PasswordEncoder passwordEncoder;
 
   @Override
   public Iterable<User> findAll() {
