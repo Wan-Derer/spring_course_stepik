@@ -1,5 +1,6 @@
 package kz.infinit.spring_course_stepik.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -20,5 +21,11 @@ public class Task {
   private LocalDate date;
   private String description;
   private boolean done = false;
+
+  @ToString.Exclude
+  @JsonIgnore
+  @ManyToOne
+  @JoinColumn(name = "user_id", referencedColumnName = "id")
+  private User user;
 
 }

@@ -16,5 +16,7 @@ public interface TaskRepository extends PagingAndSortingRepository<Task, Long> {
   @Query("update Task set done = true where id = :id")
   void markAsDone(@Param("id") Long id);
 
+  Iterable<Task> findAllByUserId (long userID);
+
 
 }
